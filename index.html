@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- moj css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container" ng-app="myApp" ng-controller="appController">
+		<!-- logo -->
+		<div class="row">
+			<div class="col-md-4">
+				<a href="index.html"><img src="img/logo.png" class="img-responsive logo"></a>
+			</div>
+			<div class="col-md-8 filterDiv">
+				<ul class="list-inline">
+					<li>
+						<label>from</label><input type="text" name="S_Date" ng-model="from"  class="form-control"/>
+
+					</li>
+					<li>
+						<label>till</label><input type="text" name="E_Date" ng-model="to" class="form-control"/>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="col-md-12" >
+					<h2>	<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> {{results.length}} TOP STORIES</h2>
+				</div>
+				<hr> 
+			</div>
+			<div class="row">
+				<section id="pinBoot" class="pinBoot">
+					<!-- loop rezulataty i wyswietl daty chronologicznie -->
+					<article class="white-panel" ng-repeat="x in results | orderBy: '-published_date' | myfilter : from : to">
+						<h5><b>{{x.section}}</b></h5>
+						<h4><a ng-href="{{x.url}}" target="_blank">{{x.title}}</a></h4>
+						<h5>{{x.byline}}</h5>
+						<p>{{x.abstract}}
+							<br><br>
+							<i>{{x.published_date | date: 'medium' }}</i>
+						</p>
+						</article>
+				</section>
+			</div>   
+		</div>
+		<!--biblioteki -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- moje skrypty -->
+		<script src="js/controller.js"></script>
+		<script src="js/grids.js"></script>
+	</body>
+	</html>

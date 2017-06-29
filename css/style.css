@@ -1,0 +1,110 @@
+body {
+ background-color:white;   
+}    
+.pinBoot {
+  position: relative;
+  /*top:140px;*/
+  max-width: 100%;
+  width: 100%;
+
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.white-panel {
+  position: absolute;
+  background: white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.white-panel h1 {
+  font-size: 1em;
+}
+.white-panel h1 a {
+  color: #A92733;
+}
+.white-panel:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-top: -5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+h5{
+	color:#bbb;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+a{
+	color:black;
+}
+a.hover{
+	color:black;
+}
+.logo{
+	margin-top: 40px;
+}
+.search{
+	width:205px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+    letter-spacing: 1px;
+    font-size:24px;
+    text-align: center;
+    font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    black;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: black;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+}
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+span{
+	letter-spacing: 1px;
+	font-weight: bold;
+	
+}
+h2{
+	font-family: verdana;
+}
+.allBtn{
+	letter-spacing: 1px;
+}
+.filterDiv{
+	margin-top:35px;
+}
+label {
+  display: block;
+  float: left;
+}
